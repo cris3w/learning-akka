@@ -1,4 +1,4 @@
-package examples
+package examples.akkahttp.clientapi
 
 import akka.actor.ActorSystem
 import scala.concurrent.{Await, Future}
@@ -40,9 +40,9 @@ object RequestLevel extends App {
   // show error: Outgoing request stream error (akka.stream.AbruptTerminationException)
   def shutdown() = {
     Http().shutdownAllConnectionPools().onComplete{ _ =>
-      // system.terminate()
-      // system.awaitTermination()
-      Await.result(system.terminate(), 1 seconds)
+      system.shutdown()
+      system.awaitTermination()
+      // Await.result(system.terminate(), 1 seconds)
     }
   }
 }

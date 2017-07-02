@@ -1,4 +1,4 @@
-package examples
+package examples.akkahttp.serverapi
 
 import akka.actor.ActorSystem
 import akka.http.scaladsl.Http
@@ -40,5 +40,5 @@ object LowLevel extends App {
 
   bindingFuture
     .flatMap(_.unbind()) // trigger unbinding from the port
-    .onComplete(_ => system.terminate()) // and shutdown when done
+    .onComplete(_ => system.shutdown()) // and shutdown when done
 }

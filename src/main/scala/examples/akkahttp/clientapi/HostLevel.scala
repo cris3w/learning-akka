@@ -1,4 +1,4 @@
-package examples
+package examples.akkahttp.clientapi
 
 import akka.actor.ActorSystem
 
@@ -50,9 +50,9 @@ object HostLevel extends App {
 
   def shutdown() = {
     Http().shutdownAllConnectionPools().onComplete{ _ =>
-      // system.terminate()
-      // system.awaitTermination()
-      Await.result(system.terminate(), 1 seconds)
+      system.shutdown()
+      system.awaitTermination()
+      // Await.result(system.terminate(), 1 seconds)
     }
   }
 }

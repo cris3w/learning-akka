@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.actorpaths
 
 import akka.actor.{ActorSystem, PoisonPill, Props}
 
@@ -27,7 +27,7 @@ object ActorPath extends App {
 
   println(s"Actor Selection for counter2 is: ${counterSelection2}")
 
-  system.terminate()
+  system.shutdown()
 }
 
 
@@ -41,5 +41,5 @@ object Watch extends App {
 
   Thread.sleep(1000)
 
-  system.terminate()
+  system.shutdown()
 }

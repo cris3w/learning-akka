@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.behavior
 
 import akka.actor.{Actor, ActorSystem, Props, Stash}
 
@@ -59,5 +59,5 @@ object BecomeHotswap extends App {
 
   Thread.sleep(100)
 
-  system.terminate()
+  system.shutdown()
 }

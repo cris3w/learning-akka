@@ -1,4 +1,4 @@
-package examples
+package examples.playingwithactors
 
 import akka.actor.SupervisorStrategy.{Escalate, Restart, Resume, Stop}
 import akka.actor.{Actor, ActorRef, ActorSystem, OneForOneStrategy, Props}
@@ -90,5 +90,5 @@ object Supervision extends App {
   Thread.sleep(1000)
   println()*/
 
-  system.terminate()
+  system.shutdown()
 }

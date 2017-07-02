@@ -1,4 +1,4 @@
-package examples
+package examples.akkahttp.clientapi
 
 import spray.json.DefaultJsonProtocol
 

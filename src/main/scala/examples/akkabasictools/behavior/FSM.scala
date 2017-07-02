@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.behavior
 
 import akka.actor.{ActorSystem, FSM, Props, Stash}
 
@@ -74,5 +74,5 @@ object FiniteStateMachine extends App {
 
   Thread.sleep(100)
 
-  system.terminate()
+  system.shutdown()
 }

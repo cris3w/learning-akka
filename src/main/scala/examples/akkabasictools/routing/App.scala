@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.routing
 
 import akka.actor.{ActorSystem, Props}
 import Worker._
@@ -28,5 +28,5 @@ object App extends App {
 
   Thread.sleep(100)
 
-  system.terminate()
+  system.shutdown()
 }

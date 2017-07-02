@@ -1,4 +1,4 @@
-package examples
+package examples.helloakka
 
 import akka.actor.{Actor, ActorSystem, Props}
 
@@ -22,5 +22,5 @@ object HelloAkkaScala extends App {
 
   greeter ! WhoToGreet("Akka")
 
-  system.terminate()
+  system.shutdown()
 }

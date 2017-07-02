@@ -1,9 +1,9 @@
-package examples
+package examples.playingwithactors
 
 import akka.actor.{Actor, ActorSystem, Props}
-import examples.MusicController.Stop
-import examples.MusicController.Play
-import examples.MusicPlayer.{StartMusic, StopMusic}
+import examples.playingwithactors.MusicController.Stop
+import examples.playingwithactors.MusicController.Play
+import examples.playingwithactors.MusicPlayer.{StartMusic, StopMusic}
 
 
 // Music Controller Messages
@@ -68,5 +68,5 @@ object Creation extends App {
   player ! StopMusic
 
   // shutdown system
-  system.terminate()
+  system.shutdown()
 }

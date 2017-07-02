@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.routing
 
 import akka.actor.Actor
 

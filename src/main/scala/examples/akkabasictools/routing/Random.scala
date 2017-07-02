@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.routing
 
 import akka.actor.{ActorSystem, Props}
 import akka.routing.{FromConfig, RandomGroup}
@@ -33,5 +33,5 @@ object Random extends App {
 
   Thread.sleep(100)
 
-  system.terminate()
+  system.shutdown()
 }

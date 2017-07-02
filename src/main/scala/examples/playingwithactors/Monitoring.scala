@@ -1,4 +1,4 @@
-package examples
+package examples.playingwithactors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props, Terminated}
 
@@ -44,5 +44,5 @@ object Monitoring extends App {
 
   Thread.sleep(500)
 
-  system.terminate()
+  system.shutdown()
 }

@@ -1,11 +1,11 @@
-package examples
+package examples.playingwithactors
 
 import akka.actor.{Actor, ActorRef, ActorSystem, Props}
 import akka.util.Timeout
 import akka.pattern.ask
-import examples.Checker.{BlackUser, CheckUser, WhiteUser}
-import examples.Recorder.NewUser
-import examples.Storage.AddUser
+import examples.playingwithactors.Checker.{BlackUser, CheckUser, WhiteUser}
+import examples.playingwithactors.Recorder.NewUser
+import examples.playingwithactors.Storage.AddUser
 import scala.concurrent.duration._
 
 
@@ -110,5 +110,5 @@ object TalkToActor extends App {
   Thread.sleep(100)
 
   // shutdown system
-  system.terminate()
+  system.shutdown()
 }

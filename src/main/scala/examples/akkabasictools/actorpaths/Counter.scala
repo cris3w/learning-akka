@@ -1,4 +1,4 @@
-package examples
+package examples.akkabasictools.actorpaths
 
 import akka.actor.Actor
 
