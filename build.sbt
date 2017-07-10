@@ -17,6 +17,8 @@ libraryDependencies ++= Seq(
 
   // 5 - akka cluster
   "com.typesafe.akka" %% "akka-remote" % "2.4.17",
+  "com.typesafe.akka" %% "akka-cluster" % "2.4.17",
+  "com.typesafe.akka" %% "akka-contrib" % "2.4.17",
 
   // 6 - testing actors
   "org.scalactic" % "scalactic_2.12" % "3.0.3",
